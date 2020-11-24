@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap");
+
+:root {
+  --box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.12),
+    0 0.1rem 0.2rem rgba(0, 0, 0, 0.24);
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  margin: 3rem auto;
+  width: 35rem;
+}
+
+h1 {
+  letter-spacing: 0.1rem;
+  margin: 0;
+}
+
+h3 {
+  border-bottom: 0.1rem solid #bbb;
+  padding-bottom: 1rem;
+  margin: 4rem 0 1rem;
+}
+
+h4 {
+  text-transform: uppercase;
+}
+
+.inc-exp-container {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+}
+
+.inc-exp-container > div:first-of-type {
+  border-right: 0.1rem solid #dedede;
+}
+
+.money {
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  margin: 0.5rem 0;
+}
+
+.money.plus {
+  color: #27ae60;
+}
+
+.money.minus {
+  color: #c0392b;
+}
+
+label {
+  display: inline-block;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+input[type="text"],
+input[type="number"] {
+  border: 0.1rem solid #dedede;
+  border-radius: 0.2rem;
+  display: block;
+  font-size: 1.6rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #c0392b;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
+  padding: 1rem;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #333;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+
+.list {
+  list-style-type: none;
+  margin-bottom: 4rem;
+}
+
+.list li {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.list li.plus {
+  border-right: 0.5rem solid #27ae60;
+  font-size: 1.3rem;
+}
+
+.list li.minus {
+  border-right: 0.5rem solid #c0392b;
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: 0;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 2rem;
+  padding: 0.2rem 0.5rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+}
+.header-text {
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  position: relative;
+}
+.header-text::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  left: 50%;
+  top: 4.4rem;
+  width: 10rem;
+  height: 0.14rem;
+  transform: translate(-50%, -50%);
+  margin-bottom: 2rem;
+}
+.center {
+  text-align: center;
+}
+.balance-text {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+.income-text,
+.expense-text {
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+::selection {
+  background-color: #2980b9;
+}
